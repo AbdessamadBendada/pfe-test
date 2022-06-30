@@ -38,8 +38,22 @@ $this->view("template/header", $data);
                                             <input type="text" placeholder="" required name="email" class="form-control">
                                             <label for="motif" class="form-label mt-3">Departement : </label>
                                             <!-- <input type="text" placeholder="" name="departement" required class="form-control"> -->
+                                           
                                             <select name="departement" id="" class="form-select">
-                                                <option value="1">hello</option>
+                                                <option value="-" selected  >Choisissez un departement</option>
+                                                    <?php
+                                                     $i = 0;
+                                                        foreach($data['id_departement'] as $res)
+                                                        {
+                                                    ?>
+                                                        <option value="$res"><?php
+                                                       
+                                                         echo $data['nom_departement'][$i];
+                                                         $i++;
+                                                         ?></option>
+                                                    <?php
+                                                            }
+                                                    ?>
                                             </select>
                                             <label for="motif" class="form-label mt-3">Telephone : </label>
                                             <input type="text" placeholder="" name="tel" required class="form-control">
