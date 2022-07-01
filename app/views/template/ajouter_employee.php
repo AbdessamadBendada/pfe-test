@@ -33,7 +33,7 @@ $this->view("template/header", $data);
                                             <label for="motif" class="form-label">Prenom : </label>
                                             <input type="text" placeholder="" name="prenom" required class="form-control">
                                             <label for="motif" class="form-label mt-3">Situation Familliale : </label>
-                                            <input type="text" placeholder="" required name="situation_familliale" class="form-control">
+                                            <input type="text" placeholder="" required name="situation_familiale" class="form-control">
                                             <label for="motif" class="form-label mt-3">Email : </label>
                                             <input type="text" placeholder="" required name="email" class="form-control">
                                             <label for="motif" class="form-label mt-3">Departement : </label>
@@ -46,7 +46,7 @@ $this->view("template/header", $data);
                                                         foreach($data['id_departement'] as $res)
                                                         {
                                                     ?>
-                                                        <option value="$res"><?php
+                                                        <option value=<?=$res?>><?php
                                                        
                                                          echo $data['nom_departement'][$i];
                                                          $i++;

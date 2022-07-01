@@ -15,7 +15,7 @@ Class User
 			$_SESSION['error'] = "";
 			$arr['password'] = $POST['password'];
 			$arr['email'] = $POST['email'];
-			$query = "select * from test where email = :email && password = :password limit 1";
+			$query = "select * from employee where email = :email && password = :password limit 1";
  			$data = $DB->read($query, $arr);
             
             
@@ -23,8 +23,8 @@ Class User
  			if (is_array($data) && count($data) != 0) {
  				// code...
                  
- 				$_SESSION['user_id'] = $data[0]->id;
-                $_SESSION['name'] = $data[0]->name;
+ 				$_SESSION['user_id'] = $data[0]->id_employee;
+                $_SESSION['name'] = $data[0]->nom ." ".$data[0]->prenom;
 				// show($_SESSION['name']);
 				// die;
  				header("Location:".ROOT."home");
@@ -53,14 +53,14 @@ Class User
 		if(isset($_SESSION['user_id']))
 		{
 			// $_SESSION['user_id'] = $data[0]->id;
-			$arr['user_id'] = $_SESSION['id'];
+			$arr['user_id'] = $_SESSION['user_id'];
 			
-			$query = "select * from test where id = :user_id";
+			$query = "select * from employee where id_employee = :user_id";
  			$data = $DB->read($query, $arr);
 
  			if (is_array($data)) {
  				// code...
- 				$_SESSION['user_id'] = $data[0]->id;
+ 				$_SESSION['user_id'] = $data[0]->id_employee;
  				return true;
  			}
 		}
