@@ -6,22 +6,43 @@ Class Ajouter_employee extends Controller
         {
             $this->ajouter_employee();
             $DB = new Database();
-            $query = "SELECT * FROM departement";
-            $result = $DB->read($query);
+            $query_departement = "SELECT * FROM departement;";
+            $result_departement = $DB->read($query_departement);
+            $query_role = "SELECT * FROM role;";
             // show($result[0]->id_departement);
-            foreach($result as $res ){
+            $result_role = $DB->read($query_role);
+            $query_metier = "SELECT * FROM metier;";
+            $result_metier = $DB->read($query_metier);
+            foreach($result_metier as $res)
+            {
+                $id_metier[]= $res->id_metier;
+                $nom[]= $res->nom;
+            }
+            $data['id_metier'] = $id_metier;
+            $data['nom_metier'] = $nom;
+            foreach($result_role as $res)
+            {
+                $id_roles[] = $res->id_role;
+                $noms[] = $res->nom;
+            }
+            $data['id_role']= $id_roles;
+            $data['nom_role'] = $noms;
+            
+            foreach($result_departement as $res )
+            {
                 $id_departements[] = $res->id_departement;
                 $nom_departements[] = $res->nom_departement;
             }
             $data['id_departement'] = $id_departements;
             $data['nom_departement'] = $nom_departements;
           
-           
+            // show($data);
+            // die;
             
             $data['page_title'] = 'Ajouter Employee';
             $this->view("template/ajouter_employee", $data);
             
-
+           
         }
 
         public function ajouter_employee()
@@ -31,7 +52,7 @@ Class Ajouter_employee extends Controller
             if(!$result)
             {
                 echo $_SESSION['user_id'];
-                echo "ir s not good";
+                echo "it s not good";
                     // header("Location:".ROOT. "login");
                     die();
             }
@@ -41,7 +62,7 @@ Class Ajouter_employee extends Controller
 		// {
             $ajouter_emp = $this->loadModel("ajouter");
             $ajouter_emp->ajouterEmployee($_POST, $_FILES);
-
+            
 
 
         // }

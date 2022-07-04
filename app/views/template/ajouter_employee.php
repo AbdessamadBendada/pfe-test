@@ -16,8 +16,17 @@ $this->view("template/header", $data);
                                 <form action="" method="POST" enctype="multipart/form-data" class="">
                                     <div class="row">
                                         <div class="col-6 ">
-                                            <label for="motif" class="form-label">Nom : </label>
-                                            <input type="text" placeholder="" name="nom" class="form-control" required>
+                                            <div class="row ">
+                                                <div class="col-6 ">
+                                                    <label for="motif" class="form-label mt-1">Nom : </label>
+                                                    <input type="text" placeholder="" name="nom" class="form-control" required>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="motif" class="form-label mt-1">Prenom : </label>
+                                                    <input type="text" placeholder="" name="prenom" required class="form-control">
+                                                </div>
+                                            </div>
+                                           
                                             <label for="motif" class="form-label mt-3">Date de naissance : </label>
                                             <input type="date" required placeholder="" name="date_naissance" class="form-control">
                                             <label for="motif" class="form-label mt-3">Cin : </label>
@@ -26,13 +35,56 @@ $this->view("template/header", $data);
                                             <input type="text" placeholder="" name="nom" class="form-control"> -->
                                             <label for="motif" class="form-label mt-3">Matricule : </label>
                                             <input type="text" placeholder="" name="matricule" required class="form-control">
-                                            <label for="motif" class="form-label mt-3">Metier : </label>
-                                            <input type="text" placeholder="" name="metier"  required class="form-control">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <label for="motif" class="form-label mt-3">Metier : </label>
+                                                    <select name="metier" id="" class="form-select">
+                                                        <option value="-" selected  >--- Choisissez un Metier ---</option>
+                                                                <?php
+                                                                $i = 0;
+                                                                    foreach($data['id_metier'] as $res)
+                                                                    {
+                                                                ?>
+                                                                    <option value=<?=$res?>><?php
+                                                                
+                                                                    echo $data['nom_metier'][$i];
+                                                                    $i++;
+                                                                    ?></option>
+                                                                <?php
+                                                                        }
+                                                                ?>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="motif" class="form-label mt-3">Role : </label>
+                                                    <select name="role" id="" class="form-select">
+                                                                <option value="-" selected  >--- Choisissez un Role ---</option>
+                                                            <?php
+                                                            $i = 0;
+                                                                foreach($data['id_role'] as $res)
+                                                                {
+                                                            ?>
+                                                                <option value=<?=$res?>><?php
+                                                            
+                                                                echo $data['nom_role'][$i];
+                                                                $i++;
+                                                                ?></option>
+                                                            <?php
+                                                                    }
+                                                            ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
                                         </div>
                                         <div class="col-6 ">
-                                            <label for="motif" class="form-label">Prenom : </label>
-                                            <input type="text" placeholder="" name="prenom" required class="form-control">
-                                            <label for="motif" class="form-label mt-3">Situation Familliale : </label>
+                                            <label for="sexe" class="form-label">Sexe : </label>
+                                            <select name="sexe" id="" class="form-select">
+                                                <option value="" selected>--- Choisissez votre sexe ---</option>
+                                                <option value="homme">Homme</option>
+                                                <option value="femme">Femme</option>
+                                            </select>
+                                            <label for="situation_familiale" class="form-label mt-3">Situation Familliale : </label>
                                             <input type="text" placeholder="" required name="situation_familiale" class="form-control">
                                             <label for="motif" class="form-label mt-3">Email : </label>
                                             <input type="text" placeholder="" required name="email" class="form-control">
@@ -40,7 +92,7 @@ $this->view("template/header", $data);
                                             <!-- <input type="text" placeholder="" name="departement" required class="form-control"> -->
                                            
                                             <select name="departement" id="" class="form-select">
-                                                <option value="-" selected  >Choisissez un departement</option>
+                                                <option value="-" selected  >--- Choisissez un departement ---</option>
                                                     <?php
                                                      $i = 0;
                                                         foreach($data['id_departement'] as $res)
