@@ -181,6 +181,11 @@
                   </a>
                 </li>
                 <li class="menu-item">
+                  <a href="<?=ROOT?>demande_absence" class="menu-link">
+                    <div >Demande d'absence</div>
+                  </a>
+                </li>
+                <li class="menu-item">
                   <a href="<?=ROOT?>demande_attestation_travaille" class="menu-link">
                     <div >Demande Attestation de Travail</div>
                   </a>
@@ -265,6 +270,12 @@
               <a href="<?=ROOT?>ajouter_employee" class="menu-link">
               <i class="menu-icon tf-icons bx bx-plus-circle"></i> 
                 <div data-i18n="Basic">Ajouter Employee</div>
+              </a>
+            </li>
+            <li class="menu-item pt-2">
+              <a href="<?=ROOT?>gestion_demandes" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-check-circle"></i> 
+                <div data-i18n="Basic">Gestion des Demandes</div>
               </a>
             </li>
             <!-- Components -->
