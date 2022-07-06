@@ -25,6 +25,10 @@ Class User
                  
  				$_SESSION['user_id'] = $data[0]->id_employee;
                 $_SESSION['name'] = $data[0]->nom ." ".$data[0]->prenom;
+				$_SESSION['role'] = $data[0]->role; // 1 => user ; 2 => admin
+				$_SESSION['image'] = $data[0]->image;
+				$_SESSION['matricule'] = $data[0]->matricule;
+				$_SESSION['nbr_jrs_restants'] = $data[0]->jrs_restants;
 				// show($_SESSION['name']);
 				// die;
  				header("Location:".ROOT."home");
@@ -71,7 +75,19 @@ Class User
 
     function logout()
     {
-        unset($_SESSION['user_id']) ;
+	
+		
+        unset($_SESSION['username']) ;
+		unset($_SESSION['name']) ;
+		unset($_SESSION['role']) ;
+		unset($_SESSION['image']) ;
+		unset($_SESSION['matricule']) ;
+		unset($_SESSION['user_id']) ;
+		unset($_SESSION['nbr_jrs_restants']) ;
+		unset($_SESSION['error']) ;
+
+		
+		
         // unset($_SESSION['username']);
         header("Location:".ROOT."login");
         

@@ -1,3 +1,9 @@
+<?php
+
+
+
+?>
+
 <!DOCTYPE html>
 
 <!-- =========================================================
@@ -140,7 +146,7 @@
               <!-- <span class="app-brand-text demo menu-text fw-bolder ms-2">Sneat</span>
             </a> -->
             <img src="<?=ASSETS?>assets/img/logo-new.png" style="width:180px;" alt="" class="pt-3">
-            <a href="<?=ASSETS?>javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
               <i class="bx bx-chevron-left bx-sm align-middle"></i>
             </a>
           </div>
@@ -150,7 +156,7 @@
           <ul class="menu-inner py-1 pt-3">
             <!-- Dashboard -->
             <li class="menu-item active">
-              <a href="index.html" class="menu-link">
+              <a href="<?=ROOT?>home" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Accueil</div>
               </a>
@@ -158,35 +164,40 @@
 
             <!-- Layouts -->
             <li class="menu-item  pt-2">
-              <a href="#" class="menu-link menu-toggle">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-edit"></i>
-                <div data-i18n="Layouts">Demandes</div>
+                <div >Demandes</div>
               </a>
 
               <ul class="menu-sub ">
-                <li class="menu-item ">
+                <!-- <li class="menu-item ">
                   <a href="<?=ROOT?>demande_conge" class="menu-link">
-                    <div data-i18n="Without menu">Demande Conges</div>
+                    <div >Demande Conges</div>
+                  </a>
+                </li> -->
+                <li class="menu-item">
+                  <a href="<?=ROOT?>demande_conge" class="menu-link">
+                    <div >Demande Conge</div>
                   </a>
                 </li>
                 <li class="menu-item">
                   <a href="<?=ROOT?>demande_attestation_travaille" class="menu-link">
-                    <div data-i18n="Without navbar">Demande Attestation de Travail</div>
+                    <div >Demande Attestation de Travail</div>
                   </a>
                 </li>
                 <li class="menu-item">
                   <a href="<?=ROOT?>demande_attestation_salaire" class="menu-link">
-                    <div data-i18n="Container">Demande Attestation de Salaire</div>
+                    <div >Demande Attestation de Salaire</div>
                   </a>
                 </li>
                 <li class="menu-item">
                   <a href="<?=ROOT?>demande_changement_nomination" class="menu-link">
-                    <div data-i18n="Fluid">Demande de Changement de Nomination</div>
+                    <div >Demande de Changement de Nomination</div>
                   </a>
                 </li>
                 <li class="menu-item">
                   <a href="<?=ROOT?>demande_reafectation" class="menu-link">
-                    <div data-i18n="Blank">Demande de Reafectation</div>
+                    <div >Demande de Reafectation</div>
                   </a>
                 </li>
               </ul>
@@ -219,7 +230,7 @@
               </ul>
             </li>
             <li class="menu-item pt-2">
-              <a href="<?=ASSETS?>javascript:void(0);" class="menu-link menu-toggle">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
                 <div data-i18n="Authentications">Convocations</div>
               </a>
@@ -401,7 +412,7 @@
             <!-- <li class="menu-header small text-uppercase"><span class="menu-header-text">Forms &amp; Tables</span></li> -->
             <!-- Forms -->
             <!-- <li class="menu-item">
-              <a href="<?=ASSETS?>javascript:void(0);" class="menu-link menu-toggle">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-detail"></i>
                 <div data-i18n="Form Elements">Form Elements</div>
               </a>
@@ -511,7 +522,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="<?=ASSETS?>javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="<?=ASSETS?>assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src="<?=$data['cropped_image'] ?>" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -520,7 +531,8 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <img src="<?=ASSETS?>assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                             
+                              <img src="<?=$data['cropped_image'] ?>" alt class="w-px-40 h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">

@@ -85,7 +85,13 @@ $this->view("template/header", $data);
                                                 <option value="femme">Femme</option>
                                             </select>
                                             <label for="situation_familiale" class="form-label mt-3">Situation Familliale : </label>
-                                            <input type="text" placeholder="" required name="situation_familiale" class="form-control">
+                                            <select name="situation_familiale" id="" class="form-select">
+                                                <option value="">--- Choisissez la situation familiale ---</option>
+                                                <option value="celibataire">bayer</option>
+                                                <option value="marie">Marie</option>
+                                                <option value="divorce">Divorce</option>
+                                                <option value="veuf">Veuf</option>
+                                            </select>
                                             <label for="motif" class="form-label mt-3">Email : </label>
                                             <input type="text" placeholder="" required name="email" class="form-control">
                                             <label for="motif" class="form-label mt-3">Departement : </label>
@@ -125,8 +131,11 @@ $this->view("template/header", $data);
                                        
                                     </div>
                                     <div class="row mt-3">
-                                        <div class="col-3">
+                                        <div class="col-1 mr-4">
                                                 <button type="submit" class="btn btn-primary">Ajouter</button>
+                                        </div>
+                                        <div class="col-3">
+                                                <button type="reset" class="btn btn-danger">Annuler</button>
                                         </div>
                                     </div>
                                           

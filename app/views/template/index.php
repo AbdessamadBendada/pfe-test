@@ -1,5 +1,8 @@
 <?php
+
 $this->view("template/header", $data);
+
+
 
 ?>
 
@@ -282,6 +285,7 @@ $this->view("template/header", $data);
                               
                           </div>
                         </div>
+                        
 
                   
                 </div>

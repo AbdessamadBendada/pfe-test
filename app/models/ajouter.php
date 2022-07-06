@@ -57,17 +57,17 @@ Class Ajouter
 			$query = "INSERT INTO employee( matricule ,  nom ,  prenom ,  date_naissance ,  adresse ,  situation_familiale ,  cin ,  email  ,  id_departement ,  image, sexe, role, metier) VALUES (  :matricule ,  :nom ,  :prenom ,  :date_naissance ,  :adresse ,  :situation_familiale ,  :cin ,  :email,  :id_departement ,  :image, :sexe, :role, :metier)";
 			$data = $DB->write($query, $arr);
 			
-			if($data)
-			{
-				//alert hna !!
-				echo" everythings okaayy man"; 
-				die();
+			// if($data)
+			// {s
+			// 	//alert hna !!
+			// 	echo" everythings okaayy man"; 
+			// 	die();
 				
-			}else{
-				echo "everythings not  okaayy  man";
-				die();
+			// }else{
+			// 	echo "everythings not  okaayy  man";
+			// 	die();
 				
-			} 
+			// } 
 		}
 
 	

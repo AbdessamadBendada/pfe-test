@@ -4,6 +4,13 @@ Class Ajouter_employee extends Controller
 {
     	public function index($a='', $b='', $c='')
         {
+            if(!isset($_SESSION['user_id'])) {
+                header("Location:".ROOT. "login");
+            }else{
+
+           
+            $image_class = $this->loadModel("image_class");
+            $data['cropped_image'] = $image_class->get_thumbnail($_SESSION['image']) ;
             $this->ajouter_employee();
             $DB = new Database();
             $query_departement = "SELECT * FROM departement;";
@@ -41,7 +48,7 @@ Class Ajouter_employee extends Controller
             
             $data['page_title'] = 'Ajouter Employee';
             $this->view("template/ajouter_employee", $data);
-            
+        }
            
         }
 

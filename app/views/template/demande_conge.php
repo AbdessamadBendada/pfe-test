@@ -11,10 +11,10 @@ $this->view("template/header", $data);
    
     <div class="container w-100 mt-3 h-100" >
         <div class="row   ">
-            <form action="#" method="post">
+            <form action="" method="post">
                 <div class="form-group">
                     	<div class="card">
-                            <div class="card-header mb-0">
+                            <div class="card-header text-primary font-weight-bold text-xl-leftmb-0">
                                                 Entrez les informations suivantes :
                                                     <hr>
                             </div>
@@ -24,6 +24,7 @@ $this->view("template/header", $data);
                                                         <div class="mt-2">
                                                             <label for="typeConge" class="form-label">Type de conge : </label>
                                                             <select name="typeConge" id="typeConge" name="type" class="form-select">
+                                                            <option value="" selected > --- Choisissez un type de conge ---</option>
                                                                 <option value="conge 1">conge 1</option>
                                                                 <option value="conge 2">conge 2</option>
                                                                 <option value="conge 3">conge 3</option>
@@ -43,10 +44,15 @@ $this->view("template/header", $data);
 
                                         <label for="html5-date-input" class="col-md-3 col-form-label">Date de fin :</label>
                                         <input class="form-control" type="date" name="datefin" id="html5-date-input" />
-                            
+                                        <input type="hidden" name="id_employee" value="<?php echo $_SESSION['user_id'] ?>">
                                     </div>
-                                                                <button class="btn btn-primary m-2" name="submit" type="submit">Valider</button>
+                                                                <!-- <button class="btn btn-primary m-2" name="submit" type="submit">Valider</button> -->
                                 </div>
+                                <div class="row mt-5">
+                                        <div class="col-3">
+                                                <button type="submit" class="btn btn-primary">Valider</button>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
                 </div>
@@ -56,7 +62,7 @@ $this->view("template/header", $data);
         <div class="row">
 
             <?php
-                if(isset($_POST['submit']))
+                if(isset($_POST['datedebut']) || isset($_POST['datefin']) || isset($_POST['motif']) || isset($_POST['type']) )
                 {
                     $stringDebut = $_POST['datedebut'];
                     $stringFin = $_POST['datefin'];
@@ -93,7 +99,13 @@ $this->view("template/header", $data);
                     </div>
                 </div>
 
-        <?php  }  ?> 
+        <?php  } else{ 
+            
+            echo "wtf is that !!!";
+            die();
+        }
+            
+            ?> 
         </div>
       
     </div>
