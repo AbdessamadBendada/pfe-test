@@ -20,7 +20,8 @@
                     </thead>
                     <tbody class="table-border-bottom-0">
                             <?php 
-                            if(isset($data[0])){
+                            
+                            if($data["conge"]){
                             foreach($data as $item){ 
                                 if(is_object($item)){
                                     // show( $item->nom ." " .$item->prenom );
@@ -74,10 +75,10 @@
                                             </button>
                                             <div class="dropdown-menu">
                                             <a class="dropdown-item" href="javascript:void(0);"
-                                                ><button type="submit" name="submit_approuver" class="btn btn-sm btn-success w-75"><i class="bx bx-edit-alt me-1">Approuver</i></button></a
+                                                ><button type="submit" name="submit_approuver_conge" class="btn btn-sm btn-success w-75"><i class="bx bx-edit-alt me-1">Approuver</i></button></a
                                             >
                                             <a class="dropdown-item" href="javascript:void(0);"
-                                                ><button type="submit" name="submit_refuser" class="btn btn-sm btn-danger w-75"><i class="bx bx-edit-alt me-1">Refuser</i></button></a
+                                                ><button type="submit" name="submit_refuser_conge" class="btn btn-sm btn-danger w-75"><i class="bx bx-edit-alt me-1">Refuser</i></button></a
                                             >
                                            
                                             </div>
@@ -133,8 +134,8 @@
                     </thead>
                     <tbody class="table-border-bottom-0">
                             <?php 
-                            if(isset($data[0])){
-                            foreach($data as $item){ 
+                            if($data['absence']){
+                            foreach($data['absence'] as $item){ 
                                 if(is_object($item)){
                                     // show( $item->nom ." " .$item->prenom );
                                     // continue;
@@ -177,8 +178,8 @@
                                         <!-- chkyyl zouin bjhhd dial span -->
                                         <!-- <span class="badge bg-label-primary me-1">Active</span> -->
 
-                                        <td><?php echo $item->date_debut ?></td>
-                                        <td><?php echo $item->date_fin ?></td>
+                                        <td><?php echo $item->heure_sortie ?></td>
+                                        <td><?php echo $item->heure_retour ?></td>
                                         <td><?php echo $item->motif ?></td>
                                         <td>
                                         <div class="dropdown">
@@ -187,21 +188,22 @@
                                             </button>
                                             <div class="dropdown-menu">
                                             <a class="dropdown-item" href="javascript:void(0);"
-                                                ><button type="submit" name="submit_approuver" class="btn btn-sm btn-success w-75"><i class="bx bx-edit-alt me-1">Approuver</i></button></a
+                                                ><button type="submit" name="submit_approuver_absence" class="btn btn-sm btn-success w-75"><i class="bx bx-edit-alt me-1">Approuver</i></button></a
                                             >
                                             <a class="dropdown-item" href="javascript:void(0);"
-                                                ><button type="submit" name="submit_refuser" class="btn btn-sm btn-danger w-75"><i class="bx bx-edit-alt me-1">Refuser</i></button></a
+                                                ><button type="submit" name="submit_refuser_absence" class="btn btn-sm btn-danger w-75"><i class="bx bx-edit-alt me-1">Refuser</i></button></a
                                             >
                                            
                                             </div>
                                         </div>
                                         </td>
                                         <input type="hidden" name="id_employee" value="<?=$item->id_employee?>">
-                                        <input type="hidden" name="id_conge" value="<?=$item->id_conge?>">
+                                        <input type="hidden" name="id_absence" value="<?=$item->id_absence?>">
                                         <input type="hidden" name="nom" value="<?=$item->nom?>">
                                         <input type="hidden" name="matricule" value="<?=$item->matricule?>">
-                                        <input type="hidden" name="date_debut" value="<?=$item->date_debut?>">
-                                        <input type="hidden" name="date_fin" value="<?=$item->date_fin?>">
+                                        <input type="hidden" name="heure_sortie" value="<?=$item->heure_sortie?>">
+                                        <input type="hidden" name="heure_retour" value="<?=$item->heure_retour?>">
+                                        <input type="hidden" name="date_absence" value="<?=$item->date_absence?>">
                                         <input type="hidden" name="motif" value="<?=$item->motif?>">
                                     </tr>
                                     </form>
@@ -221,6 +223,7 @@
                         ?> 
                     </tbody>
                   </table>
+                  
                 </div>
               </div>
               </div>

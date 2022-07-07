@@ -10,14 +10,14 @@ Class Demande_absence extends Controller
                 header("Location:".ROOT. "login");
             }
             else{
-                if(isset($_POST['typeConge']) &&  isset($_POST['motif']) && isset($_POST['datedebut']) && isset($_POST['datefin']) )
+                if(isset($_POST['heure_sortie']) &&  isset($_POST['motif']) && isset($_POST['heure_retour']) && isset($_POST['date_absence']) )
                     {
                         $arr['id_employee'] = $_POST['id_employee'];
-                        $arr['type_conge'] = $_POST['typeConge'];
-                        $arr['date_debut'] = $_POST['datedebut'];
-                        $arr['date_fin'] = $_POST['datefin'];
+                        $arr['heure_sortie'] = $_POST['heure_sortie'];
+                        $arr['heure_retour'] = $_POST['heure_retour'];
+                        $arr['date_absence'] = $_POST['date_absence'];
                         $arr['motif'] = $_POST['motif'];
-                       $query = "INSERT INTO demande_conge(id_employee, type_conge, date_debut, date_fin, motif) VALUES (:id_employee, :type_conge, :date_debut, :date_fin, :motif)" ;
+                       $query = "INSERT INTO demande_absence(date_absence, heure_sortie, heure_retour, motif,  id_employee) VALUES (:date_absence, :heure_sortie, :heure_retour, :motif,  :id_employee)" ;
                        $data = $DB->write($query, $arr);
                        if($data)
                        {

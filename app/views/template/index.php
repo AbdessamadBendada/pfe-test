@@ -17,7 +17,7 @@ $this->view("template/header", $data);
               <!-- first shortcut  -->
              
                 <div class="col-lg-2 col-md-12 col-6 mb-4">
-                  <a href="" class="uncolor">
+                  <a href="<?=ROOT?>demande_conge" class="uncolor">
                       <div class="card">
                         <div class="card-body">
                           <div class=" d-flex align-items-start justify-content-between">
@@ -53,7 +53,7 @@ $this->view("template/header", $data);
               
                     <!-- second shortcut  -->
                     <div class="col-lg-2 col-md-12 col-6 mb-4">
-                      <a href="" class="uncolor">
+                      <a href="<?=ROOT?>demande_changement_nomination" class="uncolor">
                       <div class="card">
                         <div class="card-body">
                           <div class=" d-flex align-items-start justify-content-between">
@@ -87,7 +87,7 @@ $this->view("template/header", $data);
                     <!-- /second shortcut  -->
                     <!-- third shortcut  -->
                     <div class="col-lg-2 col-md-12 col-6 mb-4">
-                      <a href="" class="uncolor">
+                      <a href="<?=ROOT?>bulletin_paie" class="uncolor">
                       <div class="card">
                         <div class="card-body">
                           <div class=" d-flex align-items-start justify-content-between">
@@ -121,7 +121,7 @@ $this->view("template/header", $data);
                      <!-- /third shortcut  -->
                      <!-- fourth shortcut  -->
                     <div class="col-lg-2 col-md-12 col-6 mb-4">
-                      <a href="" class="uncolor">
+                      <a href="<?=ROOT?>demande_attestation_salaire" class="uncolor">
                       <div class="card">
                         <div class="card-body">
                           <div class=" d-flex align-items-start justify-content-between">
@@ -149,14 +149,14 @@ $this->view("template/header", $data);
                           <!-- <h3 class="card-title text-nowrap mb-1">$4,679</h3>
                           <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small> -->
                         </div>
-                      </div>
+                            </div>
                       </a>
                     </div>
                     <!-- /fourth shortcut  -->
                     <!-- fifth shortcut  -->
 
                     <div class="col-lg-2 col-md-12 col-6 mb-4">
-                      <a href="" class="uncolor">
+                      <a href="<?=ROOT?>demande_attestation_travaille" class="uncolor">
                       <div class="card">
                         <div class="card-body">
                           <div class=" d-flex align-items-start justify-content-between">
@@ -203,7 +203,7 @@ $this->view("template/header", $data);
                                 class="rounded"
                               /> -->
 
-                              <i class="menu-icon tf-icons bx bx-user"></i>
+                              <i class="menu-icon tf-icons bx bx-group"></i>
                             </div>
                             <!-- <div class="dropdown">
                               <button
@@ -222,7 +222,7 @@ $this->view("template/header", $data);
                               </div>
                             </div> -->
                           </div>
-                          <span>Informations personnels</span>
+                          <span>Evenement au sein de notre societe</span>
                           <!-- <h3 class="card-title text-nowrap mb-1">$4,679</h3>
                           <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small> -->
                         </div>

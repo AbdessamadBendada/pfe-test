@@ -155,7 +155,7 @@
 
           <ul class="menu-inner py-1 pt-3">
             <!-- Dashboard -->
-            <li class="menu-item active">
+            <li class="menu-item <?php if($data['page_title']=="Accueil"){echo "active";}?> ">
               <a href="<?=ROOT?>home" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Accueil</div>
@@ -163,7 +163,7 @@
             </li>
 
             <!-- Layouts -->
-            <li class="menu-item  pt-2">
+            <li class="menu-item  pt-2 <?php if($data['page_title']=="Demande de Conge" || $data['page_title'] == "Demande d'absence" || $data['page_title'] == "Demande attestation de travaille" || $data['page_title'] == "Demande Reafectation" || $data['page_title'] == "Demande attestation de salaire" || $data['page_title'] == "Demande changement nomination" ){echo "active open";}?> ">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-edit"></i>
                 <div >Demandes</div>
@@ -175,32 +175,32 @@
                     <div >Demande Conges</div>
                   </a>
                 </li> -->
-                <li class="menu-item">
+                <li class="menu-item <?php if($data['page_title']=="Demande de Conge"){echo "active";}?>">
                   <a href="<?=ROOT?>demande_conge" class="menu-link">
                     <div >Demande Conge</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item <?php if($data['page_title']=="Demande d'absence"){echo "active";}?>">
                   <a href="<?=ROOT?>demande_absence" class="menu-link">
                     <div >Demande d'absence</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item <?php if($data['page_title']=="Demande attestation de travaille"){echo "active";}?>">
                   <a href="<?=ROOT?>demande_attestation_travaille" class="menu-link">
                     <div >Demande Attestation de Travail</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item <?php if($data['page_title']=="Demande attestation de salaire"){echo "active";}?>">
                   <a href="<?=ROOT?>demande_attestation_salaire" class="menu-link">
                     <div >Demande Attestation de Salaire</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item <?php if($data['page_title']=="Demande changement nomination"){echo "active";}?>">
                   <a href="<?=ROOT?>demande_changement_nomination" class="menu-link">
                     <div >Demande de Changement de Nomination</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item <?php if($data['page_title']=="Demande Reafectation"){echo "active";}?>">
                   <a href="<?=ROOT?>demande_reafectation" class="menu-link">
                     <div >Demande de Reafectation</div>
                   </a>
@@ -211,18 +211,18 @@
             <!-- <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Pages</span>
             </li> -->
-            <li class="menu-item pt-2">
+            <li class="menu-item pt-2 <?php if($data['page_title']=="Informations Personnels" || $data['page_title']=="Bulletin de Paie"){echo "active open";}?>">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-dock-top"></i>
                 <div data-i18n="Account Settings">Consultations</div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item">
+                <li class="menu-item <?php if($data['page_title']=="Informations Personnels"){echo "active";}?>">
                   <a href="<?=ROOT?>informations_personnels" class="menu-link">
                     <div data-i18n="Account">Informations Personnels</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item <?php if($data['page_title']=="Bulletin de Paie"){echo "active";}?>">
                   <a href="<?=ROOT?>bulletin_paie" class="menu-link">
                     <div data-i18n="Notifications">Bulletin de paie</div>
                   </a>
@@ -234,45 +234,45 @@
                 </li> -->
               </ul>
             </li>
-            <li class="menu-item pt-2">
+            <li class="menu-item pt-2  <?php if($data['page_title']=="Visite de Medecin de Travail" || $data['page_title']=="Conceil Discipline"){echo "active open";}?>">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
                 <div data-i18n="Authentications">Convocations</div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="<?=ROOT?>visite_medecin" class="menu-link" target="_blank">
+                <li class="menu-item <?php if($data['page_title']=="Visite de Medecin de Travail"){echo "active ";}?>">
+                  <a href="<?=ROOT?>visite_medecin" class="menu-link" target="">
                     <div data-i18n="Basic">Visite medecin de travail</div>
                   </a>
                 </li>
-                <li class="menu-item">
-                  <a href="<?=ROOT?>conceil_discipline" class="menu-link" target="_blank">
+                <li class="menu-item <?php if($data['page_title']=="Conceil Discipline"){echo "active ";}?>">
+                  <a href="<?=ROOT?>conceil_discipline" class="menu-link" target="">
                     <div data-i18n="Basic">Conceil discipline</div>
                   </a>
                 </li>
                
               </ul>
             </li>
-            <li class="menu-item pt-2">
+            <li class="menu-item pt-2 <?php if($data['page_title']=="Note de Procedure"){echo "active ";}?>">
               <a href="<?=ROOT?>note_procedure" class="menu-link">
               <i class="menu-icon tf-icons bx bx-detail"></i>
                
                 <div data-i18n="Basic">Note de Procedure</div>
               </a>
             </li>
-            <li class="menu-item pt-2">
+            <li class="menu-item pt-2 <?php if($data['page_title']=="Flux Publique"){echo "active ";}?>">
               <a href="<?=ROOT?>flux_publique" class="menu-link">
               <i class="menu-icon tf-icons bx bx-collection"></i>
                 <div data-i18n="Basic">Flux Publique</div>
               </a>
             </li>
-            <li class="menu-item pt-2">
+            <li class="menu-item pt-2 <?php if($data['page_title']=="Ajouter Employee"){echo "active ";}?>">
               <a href="<?=ROOT?>ajouter_employee" class="menu-link">
               <i class="menu-icon tf-icons bx bx-plus-circle"></i> 
                 <div data-i18n="Basic">Ajouter Employee</div>
               </a>
             </li>
-            <li class="menu-item pt-2">
+            <li class="menu-item pt-2 <?php if($data['page_title']=="Gestion des demandes"){echo "active ";}?>">
               <a href="<?=ROOT?>gestion_demandes" class="menu-link">
               <i class="menu-icon tf-icons bx bx-check-circle"></i> 
                 <div data-i18n="Basic">Gestion des Demandes</div>
@@ -557,26 +557,18 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="<?=ROOT?>informations_personnels">
                         <i class="bx bx-user me-2"></i>
-                        <span class="align-middle">My Profile</span>
+                        <span class="align-middle">Mes Informations</span>
                       </a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="#">
                         <i class="bx bx-cog me-2"></i>
-                        <span class="align-middle">Settings</span>
+                        <span class="align-middle">Changer MOt de pass</span>
                       </a>
                     </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                          <span class="flex-grow-1 align-middle">Billing</span>
-                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                        </span>
-                      </a>
-                    </li>
+                   
                     <li>
                       <div class="dropdown-divider"></div>
                     </li>
