@@ -4,7 +4,7 @@ $this->view("template/header", $data);
 ?>
 
     <div class="container h-100 mt-4">
-        <div class="row">
+        <div class="row h-100 align-items-center">
             <form action="" method="post">
                     <div class="form-group">
                         <div class="card">
@@ -16,7 +16,7 @@ $this->view("template/header", $data);
                                 <div class="row">
                                     <div class="col-6">
                                     <label for="typeConge" class="form-label">Votre nomination actuelle : </label>
-                                        <input type="text" name="nomination" value="<?=$data['emp'][0]->nom?>" class="form-control">
+                                        <input type="text" disabled name="nomination" value="<?=$data['emp'][0]->nom?>" class="form-control">
                                     </div>
                                     <div class="col-6">
                                     <label for="typeConge" class="form-label">La nouvelle nomination : </label>
@@ -35,7 +35,7 @@ $this->view("template/header", $data);
                                         <input type="submit" name="sumbit_nomination" value="Valider" class="btn btn-primary">
 
                                     </div>
-                                </div>
+                                </div   >
                             </div>
                         </div>
                     </div>

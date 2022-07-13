@@ -8141,10 +8141,11 @@ body {
   color: gray; }
 
 a {
+  /* #696CFF */
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #bd83ce; }
+  color: #696CFF; }
   a:hover, a:focus {
     text-decoration: none !important;
     outline: none !important;
@@ -8159,7 +8160,7 @@ h1, h2, h3, h4, h5,
   color: #000; }
 
 .bg-primary {
-  background: #bd83ce !important; }
+  background: #696CFF !important; }
 
 .ftco-section {
   padding: 7em 0; }
@@ -8248,7 +8249,7 @@ h1, h2, h3, h4, h5,
   font-weight: 700;
   font-size: 18px;
   color: #fff;
-  background-color: #bd83ce; }
+  background-color: #696CFF; }
 
 .calendar_content div.selected {
   background-color: rgba(153, 153, 161, 0.2);
@@ -8293,7 +8294,7 @@ button.switch-month {
     right: 0; }
 
 button.switch-month:hover {
-  color: #bd83ce; }
+  color: #696CFF; }
 
 button.switch-month:active {
   background-color: transparent; }

@@ -9,8 +9,8 @@ $this->view("template/header", $data);
 
 
    
-    <div class="container w-100 mt-3 h-100" >
-        <div class="row   ">
+    <div class="container  w-100 mt-3 h-100" >
+        <div class="row   h-100 align-items-center">
             <form action="" method="post">
                 <div class="form-group">
                     	<div class="card">

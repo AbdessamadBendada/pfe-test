@@ -10,8 +10,8 @@ $this->view("template/header", $data);
 
    
     <div class="container w-100 mt-3 h-100" >
-        <div class="row   ">
-            <form action="" method="post">
+        <div class="row   h-100 align-items-center">
+            <form action="" method="post" >
                 <div class="form-group">
                     	<div class="card">
                             <div class="card-header text-primary font-weight-bold text-xl-leftmb-0">
@@ -20,7 +20,7 @@ $this->view("template/header", $data);
                             </div>
                             <div class="card-body">                            
                                 <div class="row">        
-                                    <div class="col-6 ">                                    
+                                        <div class="col-6 ">                                    
                                                         <div class="mt-2">
                                                             <label for="typeConge" class="form-label">Type de conge : </label>
                                                             <select name="typeConge" id="typeConge" name="type" class="form-select">
@@ -35,10 +35,10 @@ $this->view("template/header", $data);
                                                             <input type="text" placeholder="Motif" name="motif" class="form-control">
                                                         </div>          
                                             
-                                    </div>
+                                        </div>
 
 
-                                    <div class="col-6 mt-2">
+                                        <div class="col-6 mt-2">
                                         <label for="html5-date-input" class="col-md-3 col-form-label">Date de debut :</label>
                                         <input class="form-control" type="date" name="datedebut"  id="html5-date-input" />
 
@@ -59,54 +59,7 @@ $this->view("template/header", $data);
             </form>
         </div>
 
-        <div class="row">
 
-            <?php
-                if(isset($_POST['datedebut']) || isset($_POST['datefin']) || isset($_POST['motif']) || isset($_POST['type']) )
-                {
-                    $stringDebut = $_POST['datedebut'];
-                    $stringFin = $_POST['datefin'];
-                    
-                    $dateDebut = date_create($stringDebut);
-                    $dateFin  =  date_create($stringFin);
-                    $interval = $dateDebut->diff($dateFin);
-
-                   
-                    
-            ?>
-                <div class="card">
-                    <div class="card-header">
-                        Information remplis :
-                    </div>
-                    <hr>
-                    <div class="card-body">
-                        <ul>
-                            
-                            <li>Type de Conje : <?=$_POST['typeConge']?></li>
-                            <li>Motif : <?=$_POST['motif']?></li>
-                            <li>date de debut : <?=$_POST['datedebut']?></li>
-                            <li>Date de fin : <?=$_POST['datefin']?></li>
-
-                            <li>Nombre de jours : <?php 
-                                    if($interval->m != 0){
-                                        echo "Vous ne pouvez pas prendre un mois en conge veuillez contacter votre superviseur";
-                                    }
-                            else
-
-                            {echo $interval->d;}  ?></li>
-
-                        </ul>
-                    </div>
-                </div>
-
-        <?php  } else{ 
-            
-            echo "wtf is that !!!";
-            die();
-        }
-            
-            ?> 
-        </div>
       
     </div>
 

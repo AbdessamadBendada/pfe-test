@@ -8,7 +8,7 @@ $this->view("template/header", $data);
         <div class="col-12 ">
                     <div class="card">
                         <div class="card-header text-primary font-weight-bold text-xl-left" style="">
-                            ENtrer les informations du nouveau employee :
+                            Entrer les informations du nouveau employee :
                                 <hr>
                         </div>
                         <div class="card-body ">

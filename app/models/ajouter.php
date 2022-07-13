@@ -46,7 +46,7 @@ Class Ajouter
 			// $arr['metier'] = $POST['metier'];
 			// $arr['password'] = $POST['password'];
 			$arr['id_departement'] = $POST['departement'];
-			// $arr['tel'] = $POST['tel'];
+			$arr['tel'] = $POST['tel'];
 			$arr['image'] = $destination;
 			$arr['sexe'] = $POST['sexe'];
 			$arr['role'] = $POST['role'];	
@@ -54,7 +54,7 @@ Class Ajouter
 					
 			// $arr['role'] = $POST['role'];
 		
-			$query = "INSERT INTO employee( matricule ,  nom ,  prenom ,  date_naissance ,  adresse ,  situation_familiale ,  cin ,  email  ,  id_departement ,  image, sexe, role, metier) VALUES (  :matricule ,  :nom ,  :prenom ,  :date_naissance ,  :adresse ,  :situation_familiale ,  :cin ,  :email,  :id_departement ,  :image, :sexe, :role, :metier)";
+			$query = "INSERT INTO employee( matricule ,  nom ,  prenom ,  date_naissance ,  adresse ,  situation_familiale ,  cin ,  email  ,  id_departement ,  image, sexe, role, metier,tel) VALUES (  :matricule ,  :nom ,  :prenom ,  :date_naissance ,  :adresse ,  :situation_familiale ,  :cin ,  :email,  :id_departement ,  :image, :sexe, :role, :metier,:tel)";
 			$data = $DB->write($query, $arr);
 			
 			// if($data)

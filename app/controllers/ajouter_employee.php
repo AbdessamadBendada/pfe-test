@@ -4,6 +4,10 @@ Class Ajouter_employee extends Controller
 {
     	public function index($a='', $b='', $c='')
         {
+            
+            if($_SESSION['role'] == 1){
+                header("Location:".ROOT. "home");
+            } else{
             if(!isset($_SESSION['user_id'])) {
                 header("Location:".ROOT. "login");
             }else{
@@ -49,6 +53,7 @@ Class Ajouter_employee extends Controller
             $data['page_title'] = 'Ajouter Employee';
             $this->view("template/ajouter_employee", $data);
         }
+    }
            
         }
 
@@ -56,13 +61,13 @@ Class Ajouter_employee extends Controller
         {
             $user =  $this->loadModel("user");
             $result = $user->checkSignin();
-            if(!$result)
-            {
-                echo $_SESSION['user_id'];
-                echo "it s not good";
-                    // header("Location:".ROOT. "login");
-                    die();
-            }
+            // if(!$result)
+            // {
+            //     echo $_SESSION['user_id'];
+            //     echo "it s not good";
+            //         // header("Location:".ROOT. "login");
+            //         die();
+            // }
 
         // if(isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['date_naissance']) && isset($_POST['cin']) && isset($_POST['matricule']) && isset($_POST['metier']) && isset($_POST['situation_familliale'])&& isset($_POST['email']) && isset($_POST['departement'])&& isset($_POST['adresse'])&& isset($_POST['tel'])&& isset($_FILES['image']))
         // if(isset($POST['submit']))

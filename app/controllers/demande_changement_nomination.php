@@ -19,13 +19,17 @@ Class Demande_changement_nomination extends Controller
                
                 if(isset($_POST['sumbit_nomination']))
                 {
-                    $arr['metier'] = $_POST['nv_nomination'] ;
+                    $arr['nv_metier'] = $_POST['nv_nomination'] ;
                     $arr['id_employee'] = $_POST['id_employee'];
-                    // die();
+                    $arr['old_metier'] = $data['emp'][0]->metier;
+                    $query_demande_nomination = "INSERT INTO demande_changement_nomination (id_employee, ancien_metier, nouveau_metier) VALUES (:id_employee, :old_metier, :nv_metier)";
+                    $data['demande_changement_nomination'] = $DB->write($query_demande_nomination, $arr);
+                    
                         // var_dump($arr['metier']);
                         // die();
-                    $query_changement_nomination = "UPDATE employee SET metier= :metier WHERE id_employee = :id_employee";
-                    $data['nomination'] = $DB->write($query_changement_nomination, $arr);
+                    // $query_changement_nomination = "UPDATE employee SET metier= :nv_metier WHERE id_employee = :id_employee";
+                    // $data['nomination'] = $DB->write($query_changement_nomination, $arr);
+
                  
                 }
                 $image_class = $this->loadModel("image_class");
