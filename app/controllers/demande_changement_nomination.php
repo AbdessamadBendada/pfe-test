@@ -24,18 +24,10 @@ Class Demande_changement_nomination extends Controller
                     $arr['old_metier'] = $data['emp'][0]->metier;
                     $query_demande_nomination = "INSERT INTO demande_changement_nomination (id_employee, ancien_metier, nouveau_metier) VALUES (:id_employee, :old_metier, :nv_metier)";
                     $data['demande_changement_nomination'] = $DB->write($query_demande_nomination, $arr);
-                    
-                        // var_dump($arr['metier']);
-                        // die();
-                    // $query_changement_nomination = "UPDATE employee SET metier= :nv_metier WHERE id_employee = :id_employee";
-                    // $data['nomination'] = $DB->write($query_changement_nomination, $arr);
-
                  
                 }
                 $image_class = $this->loadModel("image_class");
                 $data['cropped_image'] = $image_class->get_thumbnail($_SESSION['image']);
-                // show($data['emp'][0]);
-                // die();
                 $data['page_title'] = "Demande changement nomination";
                 $this->view("template/demande_changement_nomination", $data);
 

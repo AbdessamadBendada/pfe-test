@@ -12,7 +12,7 @@ $this->view("template/header", $data);
                         <thead class="table-primary">
                             <tr>
                                 <th>Nom</th>
-                                <th>Prenom</th>
+                                <th>Prénom</th>
                                 <th>Matricule</th>
                                 <!-- <th>Users</th> -->
 

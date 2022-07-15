@@ -22,7 +22,7 @@ $this->view("template/header", $data);
                   <?php  if(!isset($data['success'])){$data['success']=false;}
                     if($data['success']){ ?>
                         <div class="row justify-content-center">
-                            <span class="badge bg-label-success w-100 me-1">Votre Demande a été enregistré en succés - Attendez la verification de l'un des RH! 
+                            <span class="badge bg-label-success w-100 me-1">Votre Demande a été enregistré en succés - Attendez la vérification de l'un des RH! 
                             </span>
                         </div>
 
@@ -31,12 +31,12 @@ $this->view("template/header", $data);
                         <div class="row">
                             <div class="col-6 ">
                                 <div class="mt-2">
-                                    <label for="typeConge" class="form-label">Type de conge : </label>
+                                    <label for="typeConge" class="form-label">Type de congé : </label>
                                     <select name="typeConge" id="typeConge" name="type" class="form-select">
                                         <option value="" selected> --- Choisissez un type de conge ---</option>
-                                        <option value="conge 1">conge 1</option>
-                                        <option value="conge 2">conge 2</option>
-                                        <option value="conge 3">conge 3</option>
+                                        <option value="administratif">Administratif</option>
+                                        <option value="exceptionnel">Exceptionnel</option>
+                                     
                                     </select>
                                 </div>
                                 <div class="mt-2">

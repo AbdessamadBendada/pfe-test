@@ -42,7 +42,7 @@ $this->view("template/header", $data);
                               </div> -->
                                 <!-- </div> -->
                             </div>
-                            <span>Demande de conges</span>
+                            <span>Demande de Congés</span>
                             <!-- <h3 class="card-title text-nowrap mb-1">$4,679</h3>
                           <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small> -->
                         </div>
@@ -77,7 +77,7 @@ $this->view("template/header", $data);
                               </div>
                             </div> -->
                             </div>
-                            <span>Changement de nomination</span>
+                            <span>Changement de Nomination</span>
                             <!-- <h3 class="card-title text-nowrap mb-1">$4,679</h3>
                           <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small> -->
                         </div>
@@ -145,7 +145,7 @@ $this->view("template/header", $data);
                               </div>
                             </div> -->
                             </div>
-                            <span>Attestation de salaire</span>
+                            <span>Attestation de Salaire</span>
                             <!-- <h3 class="card-title text-nowrap mb-1">$4,679</h3>
                           <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small> -->
                         </div>
@@ -181,7 +181,7 @@ $this->view("template/header", $data);
                               </div>
                             </div> -->
                             </div>
-                            <span>Atestation de travail</span>
+                            <span>Attestation de Travail</span>
                             <!-- <h3 class="card-title text-nowrap mb-1">$4,679</h3>
                           <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small> -->
                         </div>
@@ -222,7 +222,7 @@ $this->view("template/header", $data);
                               </div>
                             </div> -->
                             </div>
-                            <span>Evenements au sein du ste</span>
+                            <span>Evénements au sein du sté</span>
                             <!-- <h3 class="card-title text-nowrap mb-1">$4,679</h3>
                           <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small> -->
                         </div>
@@ -275,7 +275,7 @@ $this->view("template/header", $data);
                         <div class="card p-2 h-auto-50">
                             <div class="card-header text-primary">
 
-                                Votre Demandes <small>( Ici On vous affiche les 5 dernieres demandes de conges et dábsence )</small>:
+                                Vos Demandes :
                                 <hr>
 
 
@@ -283,7 +283,7 @@ $this->view("template/header", $data);
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        <span class="badge bg-label-secondary me-1 w-100">Demandes Conges :</span>
+                                        <span class="badge bg-label-secondary me-1 w-100">Demandes Congés :</span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -353,7 +353,7 @@ $this->view("template/header", $data);
                                                 <div class="row">
                                                 <div class="col-12">
                                                     <span class="badge bg-label-danger w-100 me-1">Vous n'avez effectué aucune
-                                                        demande de conge  pour le moment</span>
+                                                        demande de congé  pour le moment</span>
                                                         </div>
                                                 </div>
                                                 <?php

@@ -8,7 +8,7 @@ $this->view("template/header", $data);
         <div class="col-12 ">
             <div class="card">
                 <div class="card-header text-primary font-weight-bold text-xl-left" style="">
-                    Entrer les informations du nouveau employee :
+                    Entrez les informations du nouveau employé :
                     <hr>
                 </div>
                 <div class="card-body ">
@@ -31,7 +31,7 @@ $this->view("template/header", $data);
                                             <input type="text" placeholder="" name="nom" class="form-control" required>
                                         </div>
                                         <div class="col-6">
-                                            <label for="motif" class="form-label mt-1">Prenom : </label>
+                                            <label for="motif" class="form-label mt-1">Prénom : </label>
                                             <input type="text" placeholder="" name="prenom" required
                                                 class="form-control">
                                         </div>
@@ -48,9 +48,9 @@ $this->view("template/header", $data);
                                     <input type="text" placeholder="" name="matricule" required class="form-control">
                                     <div class="row">
                                         <div class="col-6">
-                                            <label for="motif" class="form-label mt-3">Metier : </label>
+                                            <label for="motif" class="form-label mt-3">Métier : </label>
                                             <select name="metier" id="" class="form-select">
-                                                <option value="-" selected>--- Choisissez un Metier ---</option>
+                                                <option value="-" selected>--- Choisissez un Métier ---</option>
                                                 <?php
                                                                 $i = 0;
                                                                     foreach($data['id_metier'] as $res)
@@ -67,9 +67,9 @@ $this->view("template/header", $data);
                                             </select>
                                         </div>
                                         <div class="col-6">
-                                            <label for="motif" class="form-label mt-3">Role : </label>
-                                            <select name="role" id="" class="form-select">
-                                                <option value="-" selected>--- Choisissez un Role ---</option>
+                                            <label for="motif" class="form-label mt-3">Rôle : </label>
+                                            <select name="role" id="" required class="form-select">
+                                                <option value="-" selected>--- Choisissez un Rôle ---</option>
                                                 <?php
                                                             $i = 0;
                                                                 foreach($data['id_role'] as $res)
@@ -90,27 +90,27 @@ $this->view("template/header", $data);
                                 </div>
                                 <div class="col-6 ">
                                     <label for="sexe" class="form-label">Sexe : </label>
-                                    <select name="sexe" id="" class="form-select">
+                                    <select name="sexe" id="" required class="form-select">
                                         <option value="" selected>--- Choisissez votre sexe ---</option>
                                         <option value="homme">Homme</option>
                                         <option value="femme">Femme</option>
                                     </select>
                                     <label for="situation_familiale" class="form-label mt-3">Situation Familliale :
                                     </label>
-                                    <select name="situation_familiale" id="" class="form-select">
+                                    <select name="situation_familiale" id="" required class="form-select">
                                         <option value="">--- Choisissez la situation familiale ---</option>
-                                        <option value="celibataire">bayer</option>
-                                        <option value="marie">Marie</option>
-                                        <option value="divorce">Divorce</option>
+                                        <option value="celibataire">Célibataire</option>
+                                        <option value="marie">Marié</option>
+                                        <option value="divorce">Divorcé</option>
                                         <option value="veuf">Veuf</option>
                                     </select>
                                     <label for="motif" class="form-label mt-3">Email : </label>
                                     <input type="text" placeholder="" required name="email" class="form-control">
-                                    <label for="motif" class="form-label mt-3">Departement : </label>
+                                    <label for="motif" class="form-label mt-3">Département : </label>
                                     <!-- <input type="text" placeholder="" name="departement" required class="form-control"> -->
 
-                                    <select name="departement" id="" class="form-select">
-                                        <option value="-" selected>--- Choisissez un departement ---</option>
+                                    <select name="departement" id="" required class="form-select">
+                                        <option value="-" selected>--- Choisissez un département ---</option>
                                         <?php
                                                      $i = 0;
                                                         foreach($data['id_departement'] as $res)
@@ -125,14 +125,14 @@ $this->view("template/header", $data);
                                                             }
                                                     ?>
                                     </select>
-                                    <label for="motif" class="form-label mt-3">Telephone : </label>
-                                    <input type="text" placeholder="" name="tel" required class="form-control">
+                                    <label for="motif" class="form-label mt-3">Téléphone : </label>
+                                    <input type="text" placeholder="" required name="tel" required class="form-control">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <label for="motif" class="form-label mt-3">Adresse : </label>
-                                    <textarea class="form-control" name="adresse" id="exampleFormControlTextarea1"
+                                    <textarea class="form-control"  name="adresse" id="exampleFormControlTextarea1"
                                         required rows="3"></textarea>
                                 </div>
                             </div>

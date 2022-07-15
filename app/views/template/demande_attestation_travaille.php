@@ -17,15 +17,14 @@ $this->view("template/header", $data);
                     </div>
                     <div class="card-body">
                     
-                        Appuiyer sur le boutton ci-dessus pour telecharger une version pdf de votre attestation de travail !
-                        <br>
-                        Cordiallement!
+                        Appuyer sur le boutton ci-dessus pour télécharger une version pdf de votre attestation de travail !
+                       
 
                         <div class="mt-5">
                             
                                 <a href="<?=ROOT?>attestation">
 
-                                            <button  class="btn btn-primary">Telecharger l'attestation de travail</button>
+                                            <button  class="btn btn-primary">Télécharger l'attestation de travail</button>
                                 </a>
                           
                         </div>

@@ -25,7 +25,7 @@ $this->view("template/header", $data);
                         <div class="row  ">
                             <div class="col-6">
 
-                                <label for="typeConge" class="form-label mt-2">Votre departement actuelle : </label>
+                                <label for="typeConge" class="form-label mt-2">Département actuel : </label>
                                 <input type="text" name="departement" disabled
                                     value="<?=$data['emp'][0]->nom_departement?>" class="form-control">
 
@@ -37,9 +37,9 @@ $this->view("template/header", $data);
                             </div>
                             <div class="col-6">
 
-                                <label for="typeConge" class="form-label mt-3">Le nouveau departement : </label>
+                                <label for="typeConge" class="form-label mt-3">Nouveau département : </label>
                                 <select name="nv_departement" id="select_departement" onchange="fetchService(this.value)" class="form-select form-control">
-                                <option value="">--- Choisisser votre nouveau departement --- </option>
+                                <option value="">--- Choisisser votre nouveau département --- </option>
                                     <?php if(isset($data['departement'])){ 
                                         
                                         foreach($data['departement'] as $res){

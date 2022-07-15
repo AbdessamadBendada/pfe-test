@@ -27,11 +27,11 @@ $this->view("template/header", $data);
                         <?php } ?>
                         <div class="row">
                             <div class="col-6">
-                                <label for="typeConge" class="form-label">Votre nomination actuelle : </label>
+                                <label for="typeConge" class="form-label">Nomination actuelle : </label>
                                 <input type="text" disabled name="nomination" value="<?= $data['emp'][0]->nom ?>" class="form-control">
                             </div>
                             <div class="col-6">
-                                <label for="typeConge" class="form-label">La nouvelle nomination : </label>
+                                <label for="typeConge" class="form-label">Nouvelle nomination : </label>
                                 <select name="nv_nomination" class="form-select">
 
                                     <option value="1">metier 1 </option>

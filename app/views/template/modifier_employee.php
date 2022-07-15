@@ -178,18 +178,18 @@ $this->view("template/header", $data);
                                             <label for="situation_familiale" class="form-label mt-3">Situation Familliale : </label>
                                             <select name="situation_familiale" id="" class="form-select">
                                                 <option value="">--- Choisissez la situation familiale ---</option>
-                                                <option <?php if($_POST['situation_familiale'] == "celibataire"){echo "selected";}?>  value="celibataire">bayer</option>
-                                                <option <?php if($_POST['situation_familiale'] == "marie"){echo "selected";}?> value="marie">Marie</option>
-                                                <option <?php if($_POST['situation_familiale'] == "divorce"){echo "selected";}?> value="divorce">Divorce</option>
+                                                <option <?php if($_POST['situation_familiale'] == "celibataire"){echo "selected";}?>  value="celibataire">Célibataire</option>
+                                                <option <?php if($_POST['situation_familiale'] == "marie"){echo "selected";}?> value="marie">Marié</option>
+                                                <option <?php if($_POST['situation_familiale'] == "divorce"){echo "selected";}?> value="divorce">Divorcé</option>
                                                 <option <?php if($_POST['situation_familiale'] == "veuf"){echo "selected";}?> value="veuf">Veuf</option>
                                             </select>
                                             <label for="motif" class="form-label mt-3">Email : </label>
                                             <input type="text" placeholder="" required name="email" value="<?=$_POST['email']?>" class="form-control">
-                                            <label for="motif" class="form-label mt-3">Departement : </label>
+                                            <label for="motif" class="form-label mt-3">Département : </label>
                                             <!-- <input type="text" placeholder="" name="departement" required class="form-control"> -->
                                            
                                             <select name="id_departement" id="" class="form-select">
-                                                <option value="-" selected  >--- Choisissez un departement ---</option>
+                                                <option value="-" selected  >--- Choisissez un département ---</option>
                                                     <?php
                                                      $i = 0;
                                                         foreach($data['id_departement'] as $res)
@@ -204,7 +204,7 @@ $this->view("template/header", $data);
                                                             }
                                                     ?>
                                             </select>
-                                            <label for="motif" class="form-label mt-3">Telephone : </label>
+                                            <label for="motif" class="form-label mt-3">Téléphone : </label>
                                             <input type="text" placeholder="" name="tel" value="<?=$_POST['tel']?>"  required class="form-control">
                                         </div>
                                     </div>

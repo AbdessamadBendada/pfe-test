@@ -14,10 +14,9 @@
                     <table class="table ">
                         <thead class="table-primary">
                             <tr>
-                                <th>Nom et Prenom</th>
+                                <th>Nom et Prénom</th>
                                 <th>Matricule</th>
-                                <!-- <th>Users</th> -->
-                                <th>Heure de debut</th>
+                                <th>Heure de début</th>
                                 <th>Heure de retour</th>
                                 <th>Motif</th>
                                 <th>Actions</th>
@@ -28,17 +27,11 @@
                             if ($data['absence']) {
                                 foreach ($data['absence'] as $item) {
                                     if (is_object($item)) {
-                                        // show( $item->nom ." " .$item->prenom );
-                                        // continue;
                             ?>
                                         <form action="" method="post">
                                             <tr>
                                                 <td> <strong><?php echo $item->nom . " " . $item->prenom; ?></strong></td>
                                                 <td><?php echo $item->matricule ?></td>
-                                                
-                                                <!-- chkyyl zouin bjhhd dial span -->
-                                                <!-- <span class="badge bg-label-primary me-1">Active</span> -->
-
                                                 <td><?php echo $item->heure_sortie ?></td>
                                                 <td><?php echo $item->heure_retour ?></td>
                                                 <td><?php echo $item->motif ?></td>

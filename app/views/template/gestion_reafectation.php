@@ -8,12 +8,12 @@
     <div class="row mt-3">
         <div class="col">
             <div class="card">
-                <h5 class="card-header text-primary bolder">Demandes de reafectation :</h5>
+                <h5 class="card-header text-primary bolder">Demandes de réaffectation :</h5>
                 <div class="table-responsive text-nowrap">
                     <table class="table ">
                         <thead class="table-primary">
                             <tr>
-                                <th>Nom et Prenom</th>
+                                <th>Nom et Prénom</th>
                                 <th>Matricule</th>
                                 <!-- <th>Users</th> -->
                                 <th>Ancien Département</th>

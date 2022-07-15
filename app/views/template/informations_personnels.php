@@ -27,7 +27,7 @@ $this->view("template/header", $data);
                                                     <input type="text"  placeholder="" name="nom" class="form-control" disabled value="<?=$data[0]->nom;?>">
                                                 </div>
                                                 <div class="col-6">
-                                                    <label for="motif" class="form-label mt-1">Prenom : </label>
+                                                    <label for="motif" class="form-label mt-1">Prénom : </label>
                                                     <input type="text" placeholder="" name="prenom" disabled value="<?=$data[0]->prenom;?>" class="form-control">
                                                 </div>
                                             </div>
@@ -42,9 +42,9 @@ $this->view("template/header", $data);
                                             <input type="text" placeholder="" name="matricule"  disabled value="<?=$data[0]->matricule;?>" class="form-control">
                                             <div class="row">
                                                 <div class="col-6">
-                                                    <label for="motif" class="form-label mt-3">Metier : </label>
+                                                    <label for="motif" class="form-label mt-3">Métier : </label>
                                                     <select disabled name="metier" id="" class="form-select">
-                                                        <option value="-"   >--- Choisissez un Metier ---</option>
+                                                        <option value="-"  >--- Choisissez un Métier ---</option>
                                                                 <?php
                                                                 $i = 0;
                                                                     foreach($data['id_metier'] as $res)
@@ -61,7 +61,7 @@ $this->view("template/header", $data);
                                                     </select>
                                                 </div>
                                                 <div class="col-6">
-                                                    <label for="motif" class="form-label mt-3">Role : </label>
+                                                    <label for="motif" class="form-label mt-3">Rôle : </label>
                                                     <select disabled name="role" id="" class="form-select">
                                                                 <option disabled value="-" selected  >--- Choisissez un Role ---</option>
                                                             <?php
@@ -99,11 +99,11 @@ $this->view("template/header", $data);
                                             </select>
                                             <label for="motif" class="form-label mt-3">Email : </label>
                                             <input disabled type="text" value="<?=$data[0]->email;?>" placeholder="" required name="email" class="form-control">
-                                            <label for="motif" class="form-label mt-3">Departement : </label>
+                                            <label for="motif" class="form-label mt-3">Département : </label>
                                             <!-- <input type="text" placeholder="" name="departement" required class="form-control"> -->
                                            
                                             <select disabled name="departement" id="" class="form-select">
-                                                <option value="-" selected  >--- Choisissez un departement ---</option>
+                                                <option value="-" selected  >--- Choisissez un département ---</option>
                                                     <?php
                                                      $i = 0;
                                                         foreach($data['id_departement'] as $res)
@@ -118,7 +118,7 @@ $this->view("template/header", $data);
                                                             }
                                                     ?>
                                             </select>
-                                            <label for="motif" class="form-label mt-3">Telephone : </label>
+                                            <label for="motif" class="form-label mt-3">Téléphone : </label>
                                             <input disabled type="text" value="<?=$data[0]->tel;?>" placeholder=""  name="tel" required class="form-control">
                                         </div>
                                     </div>

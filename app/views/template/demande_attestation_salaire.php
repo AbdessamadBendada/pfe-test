@@ -13,13 +13,13 @@ $this->view("template/header", $data);
                     <h3>Attestation de Salaire : </h3>
                 </div>
                 <div class="card-body">
-                    Appuiyer sur le boutton ci-dessus pour telecharger une version pdf de votre attestation de Salaire !
+                    Appuyer sur le boutton ci-dessus pour télécharger une version pdf de votre attestation de Salaire !
                     <br>
                     Cordiallement!
 
                     <div class="mt-5">
                         <a href="<?=ROOT?>attestation">
-                            <button type="submit" class="btn btn-primary">Telecharger l'attestation de salaire</button>
+                            <button type="submit" class="btn btn-primary">Télécharger l'attestation de salaire</button>
                         </a>
                     </div>
                 </div>

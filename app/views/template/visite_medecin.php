@@ -8,11 +8,11 @@ $this->view("template/header", $data);
         <div class="col-12">
             <div class="card text-center">
                 <div class="card-header">
-                    <h3>Visite Medicale : </h3>
+                    <h3>Visite Médicale : </h3>
                     <hr>
                 </div>
                 <div class="card-body">
-                    Quand la date de votre visite medicale chez notre medecin approche, on va envoyer une notification avec plus de details <br>
+                    Quand la date de votre visite médicale chez notre medecin interne approche, on va envoyer une notification avec plus de détails <br>
                     Cordialement!
                 </div>
             </div>
