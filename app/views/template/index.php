@@ -256,12 +256,14 @@ $this->view("template/header", $data);
                                     </div>
                                 </div>
                                 <div class="col-sm-5 text-center text-sm-left">
+                                <a href='https://www.freepik.com/vectors/teamwork-illustration'>
                                     <div class="card-body pb-0 px-0 px-md-4">
-                                        <img src="<?= ROOT ?>assets/assets/img/illustrations/man-with-laptop-light.png"
-                                            height="140" alt="View Badge User"
+                                        <img src="<?= ROOT ?>assets/assets/img/group-working.png"
+                                            height="170"  width="260"alt="View Badge User"
                                             data-app-dark-img="illustrations/man-with-laptop-dark.png"
                                             data-app-light-img="illustrations/man-with-laptop-light.png">
                                     </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -273,7 +275,7 @@ $this->view("template/header", $data);
                         <div class="card p-2 h-auto-50">
                             <div class="card-header text-primary">
 
-                                Votre Demandes :
+                                Votre Demandes <small>( Ici On vous affiche les 5 dernieres demandes de conges et dábsence )</small>:
                                 <hr>
 
 
@@ -513,24 +515,24 @@ $this->view("template/header", $data);
                                 <img class="d-block w-100" src="<?= ROOT ?>assets/assets/img/events/event1.jpg"
                                     alt="First slide" />
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h3>First slide</h3>
-                                    <p>Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia.</p>
+                                    <!-- <h3>First slide</h3>
+                                    <p>Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia.</p> -->
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <img class="d-block w-100" src="<?= ROOT ?>assets/assets/img/events/event2.jpg"
                                     alt="Second slide" />
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h3>Second slide</h3>
-                                    <p>In numquam omittam sea.</p>
+                                    <!-- <h3>Second slide</h3>
+                                    <p>In numquam omittam sea.</p> -->
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <img class="d-block w-100" src="<?= ROOT ?>assets/assets/img/events/event3.jpg"
                                     alt="Third slide" />
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h3>Third slide</h3>
-                                    <p>Lorem ipsum dolor sit amet, virtute consequat ea qui, minim graeco mel no.</p>
+                                    <!-- <h3>Third slide</h3>
+                                    <p>Lorem ipsum dolor sit amet, virtute consequat ea qui, minim graeco mel no.</p> -->
                                 </div>
                             </div>
                         </div>

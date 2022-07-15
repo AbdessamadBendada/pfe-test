@@ -42,7 +42,7 @@
                                                 <td><?php echo $item->nouveau_metier ?></td>
 
                                                 <td>
-                                                    <div class="dropdown">
+                                                    <div class="dropdown" style="position: absolute;z-index: 10;">
                                                         <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                                                             <i class="bx bx-dots-vertical-rounded"></i>
                                                         </button>
@@ -72,7 +72,7 @@
                                 ?>
                                 <div class="row">
 
-                                    <span class="badge bg-label-danger w-100 me-1">Il n y a aucune demande d'absence non examiner pour le moment</span>
+                                    <span class="badge bg-label-danger w-100 me-1">Il n y a aucune demande de changement de nomination non examiner pour le moment</span>
 
                                 </div>
                             <?php

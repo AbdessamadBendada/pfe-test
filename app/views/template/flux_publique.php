@@ -55,7 +55,7 @@ $this->view("template/header", $data);
 $x = 0 ;
 while($x < 10) { ?>
 
-    <div id="publications" class="row ml-5 mr-5 ">
+    <div id="notes" class="row ml-5 mr-5 ">
         <div class="col h-100 ml-5 mr-5 mt-1">
             <div class="row justify-content-center">
                 <div class="card h-auto p-5 m-3">

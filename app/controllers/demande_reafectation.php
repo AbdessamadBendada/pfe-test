@@ -8,13 +8,30 @@ Class Demande_reafectation extends Controller
             if(!isset($_SESSION['user_id'])) {
                 header("Location:".ROOT. "login");
             }else{
-                $arr['id_employee'] = $_SESSION['user_id'];
-                $query_emp = "SELECT em.nom, d.nom_departement, d.id_departement, s.id_service, s.nom_service, e.id_entite, e.nom_entite FROM employee em INNER JOIN departement d ON em.id_departement = d.id_departement INNER JOIN service s ON d.id_service = s.id_service INNER JOIN entite e ON s.id_entite = e.id_entite WHERE id_employee = :id_employee";
-                $data['emp'] = $DB->read($query_emp, $arr);
-                if($data['emp'])
+                $arr_id['id_employee'] = $_SESSION['user_id'];
+                $query_emp = "SELECT em.nom, d.nom_departement, d.id_departement FROM employee em INNER JOIN departement d ON em.id_departement = d.id_departement WHERE id_employee = :id_employee";
+
+                $data['emp'] = $DB->read($query_emp,$arr_id);
+                $data['ancien_id_departement'] = $data['emp'][0]->id_departement;
+                
+                $query_departement = "SELECT * FROM departement ;";
+                $data['departement'] = $DB->read($query_departement);
+                if(isset($_POST['nv_departement']))
                 {
                     
+                    $arr_reaf['id_employee'] = $_SESSION['user_id'];
+                    $arr_reaf['id_departement'] = $_POST['nv_departement'] ;
+                    $arr_reaf['ancien_departement']= $data['ancien_id_departement'] ;
+                    // $query_update = "UPDATE employee SET id_departement=:id_departement WHERE id_employee = :id_employee" ;
+                    $query_reaectation = "INSERT INTO  demande_reafectation ( id_employee ,  ancien_departement ,  nouveau_departement ) VALUES (:id_employee ,  :ancien_departement ,  :id_departement);";
+                    $data['reafectation'] = $DB->write($query_reaectation, $arr_reaf);
+                    $query_emp = "SELECT em.nom, d.nom_departement, d.id_departement FROM employee em INNER JOIN departement d ON em.id_departement = d.id_departement WHERE id_employee = :id_employee";
+                    $data['emp'] = $DB->read($query_emp, $arr_id);
+                    show($data['emp'][0]->nom_departement);
+                    die;
+                    
                 }
+                
                 $image_class = $this->loadModel("image_class");
                 $data['cropped_image'] = $image_class->get_thumbnail($_SESSION['image']) ;
                 $data['page_title'] = "Demande Reafectation";

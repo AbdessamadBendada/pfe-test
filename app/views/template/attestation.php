@@ -1,7 +1,6 @@
 <?php
 use Dompdf\Dompdf;
 require_once '../public/assets/assets/dompdf/autoload.inc.php';
-
 $dompdf = new Dompdf();
 
 ob_start();

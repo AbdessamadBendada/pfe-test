@@ -122,8 +122,13 @@
               <span class="text-danger">
 <?php 
 if(isset($_POST['email'])&& isset($_POST['password'])){
-  echo $_SESSION['error'];
-   unset($_SESSION['error']);
+  ?>
+
+<span class="badge bg-label-danger w-100 me-1"><?=$_SESSION['error']?>
+                            </span>
+
+  <?php
+ 
 }
  ?>
 

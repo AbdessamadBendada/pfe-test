@@ -6,11 +6,11 @@
 <div class="container h-100 ">
     
 
-    <div class="row mt-3">
+    <div class="row mt-3 h-75 ">
         <div class="col">
-            <div class="card">
+            <div class="card ">
                 <h5 class="card-header text-primary bolder">Demandes d'absence :</h5>
-                <div class="table-responsive text-nowrap">
+                <div class="table-responsive text-nowrap  ">
                     <table class="table ">
                         <thead class="table-primary">
                             <tr>
@@ -43,7 +43,7 @@
                                                 <td><?php echo $item->heure_retour ?></td>
                                                 <td><?php echo $item->motif ?></td>
                                                 <td>
-                                                    <div class="dropdown">
+                                                    <div class="dropdown" style="position: absolute;z-index: 10;">
                                                         <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                                                             <i class="bx bx-dots-vertical-rounded"></i>
                                                         </button>

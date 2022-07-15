@@ -18,16 +18,8 @@ Class Demande_absence extends Controller
                         $arr['date_absence'] = $_POST['date_absence'];
                         $arr['motif'] = $_POST['motif'];
                        $query = "INSERT INTO demande_absence(date_absence, heure_sortie, heure_retour, motif,  id_employee) VALUES (:date_absence, :heure_sortie, :heure_retour, :motif,  :id_employee)" ;
-                       $data = $DB->write($query, $arr);
-                       if($data)
-                       {
-                        echo"rah koulchi ghadi mzian a 3chiri";
-                        die();
-
-                       }else{
-                        echo"rah ghi katkhwwer a 3chiri ";
-                        die();
-                       }
+                       $data['success'] = $DB->write($query, $arr);
+                   
 
                     }
             

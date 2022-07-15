@@ -24,13 +24,13 @@ class Information_paie extends Controller
                         $arr['rib'] = $_POST['rib_modifier'];
                         $query_modifier = "UPDATE  paie SET  salaire_base =:salaire_base, rib =:rib, id_employee =:id_employee WHERE id_employee = :id_employee";
                         $data_modifier = $DB->write($query_modifier, $arr);
-                        if ($data_modifier) {
-                            echo "rak ghadi mzian";
-                            die;
-                        } else {
-                            echo "rak maghadich mzian";
-                            die;
-                        }
+                        // if ($data_modifier) {
+                        //     echo "rak ghadi mzian";
+                        //     die;
+                        // } else {
+                        //     echo "rak maghadich mzian";
+                        //     die;
+                        // }
                     }
                 } else {
                     // $data['exists']  = false;
@@ -41,13 +41,13 @@ class Information_paie extends Controller
                         $arr['rib'] = $_POST['rib_ajouter'];
                         $query_ajouter = "INSERT INTO paie(salaire_base, rib, id_employee) VALUES (:salaire_base, :rib, :id_employee)";
                         $data_ajouter = $DB->write($query_ajouter, $arr);
-                        if ($data_ajouter) {
-                            echo "rak ghadi mzian";
-                            die;
-                        } else {
-                            echo "rak maghadich mzian";
-                            die;
-                        }
+                        // if ($data_ajouter) {
+                        //     echo "rak ghadi mzian";
+                        //     die;
+                        // } else {
+                        //     echo "rak maghadich mzian";
+                        //     die;
+                        // }
                     }
                 }
             }

@@ -56,6 +56,7 @@ Class Ajouter
 		
 			$query = "INSERT INTO employee( matricule ,  nom ,  prenom ,  date_naissance ,  adresse ,  situation_familiale ,  cin ,  email  ,  id_departement ,  image, sexe, role, metier,tel) VALUES (  :matricule ,  :nom ,  :prenom ,  :date_naissance ,  :adresse ,  :situation_familiale ,  :cin ,  :email,  :id_departement ,  :image, :sexe, :role, :metier,:tel)";
 			$data = $DB->write($query, $arr);
+			return $data;
 			
 			// if($data)
 			// {s

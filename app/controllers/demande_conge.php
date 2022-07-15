@@ -19,20 +19,19 @@ Class Demande_conge extends Controller
                         $arr['date_fin'] = $_POST['datefin'];
                         $arr['motif'] = $_POST['motif'];
                        $query = "INSERT INTO demande_conge(id_employee, type_conge, date_debut, date_fin, motif) VALUES (:id_employee, :type_conge, :date_debut, :date_fin, :motif)" ;
-                       $data_return = $DB->write($query, $arr);
+                       $data['success'] = $DB->write($query, $arr);
                     
 
                     }
             
-            // $query= "SELECT * FROM demande_conge ";  
+             
             $nbr_restant = $_SESSION['nbr_jrs_restants'];
             $_SESSION['error'] = "";
             if($nbr_restant == 0 )
             {
                     $_SESSION['error'] = "Vous aves epuiser votre nombre de jours de conge pour cette annee!";
             }
-            // show($data);
-            // die();
+            
             $image_class = $this->loadModel("image_class");
             
             $test[] = $image_class->get_thumbnail($_SESSION['image']) ;

@@ -15,7 +15,8 @@ Class Ajouter_employee extends Controller
            
             $image_class = $this->loadModel("image_class");
             $data['cropped_image'] = $image_class->get_thumbnail($_SESSION['image']) ;
-            $this->ajouter_employee();
+            $data['success'] = $this->ajouter_employee();
+            // show($data);
             $DB = new Database();
             $query_departement = "SELECT * FROM departement;";
             $result_departement = $DB->read($query_departement);
@@ -61,28 +62,17 @@ Class Ajouter_employee extends Controller
         {
             $user =  $this->loadModel("user");
             $result = $user->checkSignin();
-            // if(!$result)
-            // {
-            //     echo $_SESSION['user_id'];
-            //     echo "it s not good";
-            //         // header("Location:".ROOT. "login");
-            //         die();
-            // }
-
-        // if(isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['date_naissance']) && isset($_POST['cin']) && isset($_POST['matricule']) && isset($_POST['metier']) && isset($_POST['situation_familliale'])&& isset($_POST['email']) && isset($_POST['departement'])&& isset($_POST['adresse'])&& isset($_POST['tel'])&& isset($_FILES['image']))
-        // if(isset($POST['submit']))
-		// {
+            
             $ajouter_emp = $this->loadModel("ajouter");
-            $ajouter_emp->ajouterEmployee($_POST, $_FILES);
+           return $ajouter_emp->ajouterEmployee($_POST, $_FILES);
+            
             
 
 
-        // }
+  
 
         
-        // show($_SESSION['error']);
-        // die();
-
+      
         }
 
        

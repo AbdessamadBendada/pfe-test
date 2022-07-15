@@ -2,8 +2,8 @@
 $this->view("template/header", $data);
 ?>
 
-<div class="container border h-100 mt-4">
-    <div class="row ">
+<div class="container   h-100 mt-4">
+    <div class="row   h-100 align-items-center">
         <div class="col-12 ">
             <?php if (!isset($_POST['submit_modifier'])) {  ?>
             <div class="card">
@@ -101,13 +101,12 @@ $this->view("template/header", $data);
 <?php } else {
     $index = $_POST['index'];
                 if (!$data['exists']) { 
-                    // show($data);
-                    // show($data['emp'][$index]->id_employee);   
-                    // die;
+                    
                          ?>
 
-<div class="container  h-100  mt-4">
-    <div class="row h-100  align-items-center">
+<div class="container   h-100 mt-4">
+    <div class="row   h-100 align-items-center">
+    <div class="col-12 ">
         <form action="" method="post">
             <div class="form-group">
                 <div class="card">
@@ -142,11 +141,10 @@ $this->view("template/header", $data);
                 </div>
             </div>
         </form>
+        </div>
     </div>
 </div>
-</div>
-</div>
-</div>
+
 
 
 
@@ -197,9 +195,7 @@ $this->view("template/header", $data);
         </form>
     </div>
 </div>
-</div>
-</div>
-</div>
+
 
 
 

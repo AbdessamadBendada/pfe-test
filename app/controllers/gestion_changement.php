@@ -8,7 +8,7 @@ Class Gestion_changement extends Controller
             
 
 
-            if ($_SESSION['role'] == 2) {
+            if ($_SESSION['role'] == 1) {
                 header("Location:" . ROOT . "home");
             } else {
                 if (!isset($_SESSION['user_id'])) {
@@ -18,8 +18,8 @@ Class Gestion_changement extends Controller
             $arr_nomination['id_employee'] = $_SESSION['user_id'];
             $query_nomination = "SELECT  n.id_changement_nomination, em.id_employee,em.matricule,em.prenom, em.nom , n.ancien_metier,   n.nouveau_metier,  m.nom as 'ancien_metier' , nm.nom as 'nouveau_metier', nm.id_metier as 'id_nv_metier'
             FROM demande_changement_nomination n inner join employee em on n.id_employee = em.id_employee
-            inner join metier m on n.ancien_metier = m.id_metier inner join metier nm on n.nouveau_metier = nm.id_metier WHERE em.id_employee = :id_employee   AND n.etat = 'attente' ";
-            $data['nomination']=$DB->read($query_nomination, $arr_nomination);
+            inner join metier m on n.ancien_metier = m.id_metier inner join metier nm on n.nouveau_metier = nm.id_metier WHERE  n.etat = 'attente' ";
+            $data['nomination']=$DB->read($query_nomination);
             // show($data['nomination']);
             // die();
             // $query_nv_nomination = "SELECT m.nom FROM metier m INNER JOIN demande_changement_nomination n ON m.id_metier = n.ancien_metier";

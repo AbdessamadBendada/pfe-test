@@ -21,7 +21,7 @@ Class Modifier_employee extends Controller
             $data['cropped_image'] = $image_class->get_thumbnail($_SESSION['image']) ;
             // $this->ajouter_employee();
             
-            $query_employee = "SELECT * FROM employee;";
+            $query_employee = "SELECT * FROM employee order by id_employee desc;";
             $data['emp'] = $DB->read($query_employee);
 
 
@@ -78,7 +78,7 @@ Class Modifier_employee extends Controller
                     $query_update = "UPDATE  employee  SET  matricule = :matricule, nom =:nom, prenom =:prenom, date_naissance =:date_naissance, adresse =:adresse, situation_familiale =:situation_familiale, cin =:cin, email =:email, id_departement =:id_departement,  sexe =:sexe, role =:role, metier =:metier, tel =:tel WHERE id_employee = :id_employee;";
 
                     $data_update = $DB->write($query_update, $arr_update);
-                    $query_employee = "SELECT * FROM employee;";
+                    $query_employee = "SELECT * FROM employee order by id_employee desc;";
                     $data['emp'] = $DB->read($query_employee);
                 
                 }

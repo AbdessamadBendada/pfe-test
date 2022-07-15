@@ -77,6 +77,8 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="<?=ASSETS?>assets/js/config.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
   </head>
 
   <body>
@@ -201,7 +203,7 @@
               <a href="<?=ROOT?>note_procedure" class="menu-link">
               <i class="menu-icon tf-icons bx bx-detail"></i>
                
-                <div data-i18n="Basic">Note de Procedure</div>
+                <div data-i18n="Basic">Notes de Procedure</div>
               </a>
             </li>
             <!-- <li class="menu-item pt-2 <?php if($data['page_title']=="Flux Publique"){echo "active ";}?>">
@@ -210,7 +212,7 @@
                 <div data-i18n="Basic">Flux Publique</div>
               </a>
             </li> -->
-<?php   if($_SESSION['role'] == 1):  ?>
+<?php   if($_SESSION['role'] == 2):  // le role 2 => admin / le role 1 => user ?>
             <li class="menu-item  pt-2 <?php if($data['page_title']=="Ajouter Employee" || $data['page_title'] == "Modifier Employee" || $data['page_title'] == "Modifier Information de paie" || $data['page_title'] == "Supprimer Employee" ){echo "active open";}?> ">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-group"></i>
@@ -269,6 +271,27 @@
                     <div >Demandes de reafectation</div>
                   </a>
                 </li>
+
+              </ul>
+            </li>
+            <li class="menu-item  pt-2 <?php if($data['page_title']=="Ajouter Département" || $data['page_title'] == "Supprimer Département" || $data['page_title'] == "" || $data['page_title'] == "" ){echo "active open";}?> ">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-buildings"></i><i class=''></i>
+                <div >G. Départements</div>
+              </a>
+
+              <ul class="menu-sub ">
+                <li class="menu-item <?php if($data['page_title']=="Ajouter Département"){echo "active ";}?>">
+                  <a href="<?=ROOT?>ajouter_departement" class="menu-link">
+                    <div>Ajouter Département</div>
+                  </a>
+                </li>
+                <li class="menu-item <?php if($data['page_title']=="Supprimer Département"){echo "active";}?>">
+                  <a href="<?=ROOT?>supprimer_departement" class="menu-link">
+                    <div >Suppr. Département</div>
+                  </a>
+                </li>
+                
 
               </ul>
             </li>
@@ -355,7 +378,7 @@
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="changer_password">
                         <i class="bx bx-cog me-2"></i>
                         <span class="align-middle">Changer MOt de pass</span>
                       </a>

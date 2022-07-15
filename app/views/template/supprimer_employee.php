@@ -7,7 +7,7 @@ $this->view("template/header", $data);
         <div class="col-12 ">
 
             <div class="card">
-                <form action="" method="post">
+                <form action="" method="post" onsubmit="valider()">
                     <table class="table ">
                         <thead class="table-primary">
                             <tr>
@@ -42,7 +42,7 @@ $this->view("template/header", $data);
                                         <div class="dropdown">
                                             <input type="hidden" name="id_employee" value="<?=$item->id_employee?>">
                                             <input type="hidden" name="matricule" value="<?=$item->matricule?>">
-                                            <button type="submit" name="submit_supprimer"
+                                            <button type="submit"  name="submit_supprimer"
                                                 class="btn btn-sm btn-danger">Supprimer <i class='bx bx-trash'></i></button>
 
                                            
@@ -85,7 +85,14 @@ $this->view("template/header", $data);
 
 
 
+<script>
 
+    function valider(){
+        x = confirm("Voullez Vous vraiment supprimer cet employé?");
+        
+
+    }
+</script>
 
 
 
